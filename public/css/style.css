@@ -1,0 +1,494 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background: url('images/background.jpg') center/cover no-repeat;
+    filter: blur(8px); 
+}
+
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    opacity: 70%;
+}
+
+.hero-section {
+    padding: 20px;
+    text-align: center;
+    color: #fff;   
+}
+
+.hero-section-head{
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.trending-movies-title {
+    text-align: center;
+    color: #fff;
+    font-weight: bolder;
+    margin: 30px;
+}
+
+main {
+    padding: 20px;
+    margin: 0 25px;
+}
+
+.new-movies, .upcoming-movies {
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin: 50px 0px;
+}
+
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.movie-card {
+    width: calc(25% - 20px);
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+    width: 230px;
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 80%;
+    border-bottom: 1px solid #ddd;
+    object-fit: cover;
+}
+
+.movie-details {
+    padding: 10px;
+    
+}
+
+.movie-details-link {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.movie-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.movie-year {
+    font-size: 14px;
+    color: #888;
+}
+
+.hover-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .hover-info {
+    opacity: 1;
+}
+
+.rating,
+.category {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.page {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #06864a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.page:hover {
+    background-color: #555;
+}
+
+
+form {
+    background-color: #ffffff5e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    height: auto;
+    text-align: center;
+    margin-left: 27.5%;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff7e;
+    border: none;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 98.6%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;    
+}
+
+.footer-right a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-right a:hover {
+    opacity: 70%;
+    color: #0aa5e2;
+}
+
+
+.movie-details {
+    position: relative;
+    flex: 1;
+}
+
+.details-movie-image {
+    max-width: 100%;
+    height: auto;
+    border: #fff solid 5px;
+    margin-left: 30px;
+}
+
+.details {
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000000b3;
+}
+
+h2, p {
+    margin-bottom: 10px;
+}
+
+.btn-download {
+    color: #fff;
+    background-color: #06864a;
+    width: 230px;
+    text-decoration: none;
+    margin-left: 29.5px;
+    margin-top: 5px;
+}
+
+
+.btn-download a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.btn-watch {
+    color: #fff;
+    background-color: #0754b8;
+    width: 230px;
+    text-decoration: none;
+    margin-left: 29.5px;
+    margin-top: 5px;
+}
+
+.btn-watch:hover {
+    background-color: #1570e6
+}
+
+.btn-watch a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.about-movie {
+    position: relative;
+    color: #fff;
+    width: 850px;
+    margin-left: 40px;
+    height: auto;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.about-movie h3{
+    font-weight: bold;
+    background-color: #06864a;
+    width: 193px;
+}
+
+.about-movie h4{
+    font-weight: bold;
+    background-color: #06864ab2;
+    width: auto;
+    text-align: center;
+    border-radius: 15px 0px 10px 5px;
+}
+
+
+.comment-form {
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form form {
+    margin-left: -10px;
+}
+
+.comment-form h3 {
+    color: #fff;
+}
+
+.label-input {
+    width: 90px;
+    background-color: #06864a;
+}
+
+.label-text-area {
+    width: 120px;
+    background-color: #06864a;
+}
+
+.comment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;    
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    opacity: 80%;
+}
+
+.comment-form button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #45a049;
+}
+
+
+.user-opinions {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-opinions h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.user-opinion {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.user-opinion p {
+    margin: 0;
+}
+
+#rate-10 {
+    font-size: 22px;
+}
+
+#imdb-img {
+    margin-bottom: -2px;
+}
+
+#rate-star {
+    color: #FFD700;
+}
+
+.movie-related {
+    float: right;
+    margin-top: -600px;
+    right: 50px;
+    position: relative;
+    width: 250px;
+}
+
+.movie-related img {
+    width: 92px;
+    height: 138px;
+    border: 4px solid #fff;
+    margin: 5px;
+}
+
+.movie-related p {
+    font-weight: 700;
+    font-size: 16px;
+    text-shadow: 0 2px 2px rgba(0,0,0,.4);
+    text-align: left;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.movie-related a:hover img {
+    transform: scale(1.1); 
+    transition: .5s ease-in-out;
+}
+
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-related a:hover .tooltip {
+    opacity: 1; 
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.alert {
+    text-align: center;
+    font-size: 44px;
+    color: #cf1f08;
+    background-color: #333;
+    margin: 3px;
+}
+
+.alert ul {
+    list-style: decimal;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
